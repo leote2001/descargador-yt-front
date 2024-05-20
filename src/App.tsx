@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Form from "./components/Form";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1 className="header-h1">DescargadorYT</h1>
       </header>
-    </div>
+      <main>
+        <p className="main-p-indicacion">1. Pega la URL del video de YouTube y presiona el botón Start para comenzar.</p>
+        <p className="main-p-indicacion">2. Una vez que aparezcan los datos del video selecciona el formato y presiona el botón Descargar. Si solo quieres descargar el audio del video, simplemente presiona Descargar en formato wav o Descargar en formato mp3.</p>
+        <hr />
+        <Form />
+      </main>
+      <footer>
+        <p className="footer-p">Copyright &copy;2024</p>
+      </footer>
+    </>
   );
 }
 
