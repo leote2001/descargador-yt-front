@@ -36,7 +36,7 @@ export default function Form() {
                 <div className="form-element">
                 <label htmlFor="url">URL del video</label>
                 
-                <input onChange={(e) => setUrl(e.target.value)} id="url" name="url" required type="text" value={url} />
+                <input placeholder="Pega aquí la URL del video que quieres descargar" autoFocus onChange={(e) => setUrl(e.target.value)} id="url" name="url" required type="text" value={url} />
                 </div>
                 <button className="form-button-start">Start</button>
             </form>
