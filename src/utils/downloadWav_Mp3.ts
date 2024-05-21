@@ -11,8 +11,10 @@ const link = document.createElement("a");
 link.href=urlBlob;
 link.setAttribute("download", filename);
 document.body.appendChild(link);
+link.style.visibility="hidden";
 link.click();
 URL.revokeObjectURL(urlBlob);
+link.remove();
 } catch(err: any) {
     throw err;
 }

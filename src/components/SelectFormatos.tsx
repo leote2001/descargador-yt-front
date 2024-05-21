@@ -32,8 +32,10 @@ export function SelectFormatos({ videoFormats, videoUrl, videoDetails }: SelectF
             link.href = urlVideo;
             link.setAttribute("download", filename);
             document.body.appendChild(link);
+            link.style.visibility="hidden";
             link.click();
             URL.revokeObjectURL(urlVideo);
+            link.remove();
             setLoading(false);
         } catch (err: any) {
             setError(err.message);
@@ -63,7 +65,7 @@ export function SelectFormatos({ videoFormats, videoUrl, videoDetails }: SelectF
 
                 <select value={formatoElegido} onChange={(e) => setFormatoElegido(e.target.value)} name="formatos" id="formatos">
                     {formatsNewArray.map((formato) => (
-                        <option key={formato.itag} value={formato.itag}>{formato.container} {formato.qualityLabel}</option>
+                        <option key={formato.itag} value={formato.itag}>{formato.container} - {formato.qualityLabel}</option>
                     ))}
                 </select>
 
