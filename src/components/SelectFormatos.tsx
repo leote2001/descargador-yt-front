@@ -22,7 +22,7 @@ export function SelectFormatos({ videoFormats, videoUrl, videoDetails }: SelectF
             setLoading(true);
             const formatoFilter = videoFormats.find(formato => formato.itag == formatoElegido);
             const filename = `${videoDetails.title}.${formatoFilter.container}`;
-            const video = await fetch(`http://descargador-yt.portfolio-ls.online/video/download?url=${videoUrl}&format=${formatoElegido}`);
+            const video = await fetch(`https://descargador-yt.portfolio-ls.online/video/download?url=${videoUrl}&format=${formatoElegido}`);
             if (!video.ok) {
                 throw new Error("Error al descargar video");
             }
