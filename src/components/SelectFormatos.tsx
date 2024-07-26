@@ -70,6 +70,7 @@ export function SelectFormatos({ videoFormats, videoUrl, videoDetails }: SelectF
                 </select>
 
                 <br />
+                <p><strong>Importante! En ocasiones la descarga del video puede fallar debido a las actualizaciones realizadas por Youtube.</strong></p>
                 <div className="form-buttons-group">
                     <button type="submit">Descargar</button>
                     <button onClick={wav_mp3}>Descargar en formato wav</button>
